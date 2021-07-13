@@ -14,9 +14,7 @@
                 color: $c-gray-01;
             }
             
-            section {
-                padding: 16px 0;
-            }
+            
         }
         
         &.is-rollout {
@@ -32,5 +30,9 @@
                 }
             }
         }
+    }
+    
+    &__section {
+        padding: 16px 0;
     }
 }
