@@ -1,0 +1,14 @@
+.o-download {
+    
+    ul {
+        @extend %flex;
+        flex-wrap: nowrap;
+    }
+    
+    li {
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}

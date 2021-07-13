@@ -1,0 +1,73 @@
+.c-faq {
+    
+    img {
+        @media ( max-width: $tablet_portrait + px ) {
+            margin: 0 auto;
+        }
+    }
+    
+    .o-accordion {
+        a {
+            color: $c-blue-03;
+        }
+    
+        h3 {
+            @extend %lead--4;
+            @extend %rel;
+            border-bottom: 1px solid $c-black-02;
+            padding: {
+                top: 15px;
+                bottom: 15px;
+                right: 40px;
+            }
+            font-weight: $bold;
+            
+            &:after {
+                @extend %abs;
+                @extend %anim;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%); 
+                font: {
+                    family: $icomoon;
+                    size: rem(24);
+                }
+                content: "\e905";
+                
+                @media ( max-width: $base + 80px ) {
+                	@include responsive-font(base(24), rem(16));
+                }
+            }
+        }
+    }
+
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+    	    flex-direction: column-reverse;
+        }
+        
+        &__item {
+            
+            &:first-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                	padding-right: 40px;
+                }                
+            }
+            
+            &:last-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    width: grid(700);
+                    margin: 0 0 0 auto;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    padding-bottom: 4em;
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 5em;        
+    }
+}

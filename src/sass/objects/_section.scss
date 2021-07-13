@@ -1,0 +1,11 @@
+.o-section {
+    padding: {
+        top: 110px;
+        bottom: 110px;
+    }
+    
+    @media ( max-width: $base + 80px ) {
+    	@include responsive-padding-top(base(110), rem(80));
+    	@include responsive-padding-bottom(base(110), rem(80));
+    }
+}

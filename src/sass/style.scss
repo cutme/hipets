@@ -1,0 +1,44 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+//@import 'tools/blazy';
+//@import 'tools/custom-select';
+//@import 'tools/glide';
+//@import 'tools/glightbox';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+@import 'generic/screen-reader';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/accordion';
+@import 'objects/article';
+@import 'objects/btn';
+@import 'objects/cols';
+@import 'objects/download';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/leads';
+@import 'objects/logo';
+@import 'objects/section';
+@import 'objects/social';
+@import 'objects/wrap';
+
+@import 'components/benefits';
+@import 'components/contest';
+@import 'components/faq';
+@import 'components/footer';
+@import 'components/hero';
+@import 'components/intro';
+@import 'components/steps';
+
+@import 'trumps/trumps';

@@ -1,0 +1,31 @@
+.o-social {
+    
+   a {
+        @extend %flex;
+        @extend %flex-xy;
+        @extend %anim;
+        width: 38px; height: 38px;
+        background-color: $c-gray-05;
+        border-radius: 50%;
+        font-size: rem(22);
+        color: $c-black-01;
+        
+        &:hover {
+            transform: translateY(-4px);
+        }
+        
+        &.icon-linkedin {
+            padding-bottom: 4px;
+        }
+    }
+
+    ul {
+        @extend %flex;
+    }
+    
+    li {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}

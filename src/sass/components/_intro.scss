@@ -1,0 +1,59 @@
+.c-intro {
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	background-color: $c-gray-06;
+    }
+    
+    figure {
+        img {
+        @media ( max-width: $smartphone_portrait + px ) {
+            	margin: 20px auto 0 auto;
+            }
+        }
+    }
+    
+    .o-article {
+        p {
+            @extend %lead--3;
+            
+            @media ( max-width: $base + 80px ) {
+            	@include responsive-font(base(24), rem(14));
+            }
+        }
+    }
+    
+    .o-cols {
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            &:first-of-type {
+                @extend %flex;
+                @extend %flex-y;
+                
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    width: grid(670);
+                }
+            }
+            
+            &:last-of-type {
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    width: grid(390);
+                    margin: 0 0 0 auto;
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 3em;
+    }
+    
+    .o-section {
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding-bottom: 0;
+        }
+    }
+}

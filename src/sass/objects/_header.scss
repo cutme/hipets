@@ -1,0 +1,11 @@
+.o-header {
+
+    h2, h3 {
+       @extend %lead--2; 
+    }
+
+    h2 {
+       
+       font-weight: $bold;
+    }    
+}

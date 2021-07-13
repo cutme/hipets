@@ -1,0 +1,90 @@
+.c-benefits {
+    
+    ul {
+        max-width: 570px;
+        margin: 0 auto 100px auto;
+        
+        li {
+            background: white;
+            box-shadow: 0 15px 50px rgba(36, 48, 87, 0.05);
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 16px 20px;
+            
+            figure {
+                @extend %flex;
+                @extend %flex-y;
+                
+                img {
+                    margin-right: 20px;
+                }
+            }
+            
+            p {
+                &:first-of-type {
+                    @extend %lead--4;
+                    font-weight: $bold;
+                }
+                
+                &:last-of-type {
+                    @extend %lead--6;
+                    color: $c-gray-01;
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 5em;
+        
+        h2 {
+            @media ( max-width: $smartphone_portrait + px ) {
+                margin-bottom: .5em;	
+            }
+        }
+        
+        h3 {
+            line-height: 1.2em;
+            font-size: rem(28);
+            
+            @media ( max-width: $base + 80px ) {
+            	@include responsive-font(base(28), rem(14));
+            }
+        }
+    }
+
+    .o-more {
+        @media ( min-width: $smartphone_portrait + 1px ) {
+            text-align: center;
+        }
+        
+        p {
+           line-height: 1.2em;
+
+            &:first-of-type {
+                margin-bottom: 1em;
+                font-size: rem(28);
+                
+                @media ( max-width: $base + 80px ) {
+                	@include responsive-font(base(28), rem(14));
+                }
+            }
+            
+            &:nth-of-type(2) {
+                font: {
+                    size: rem(38);
+                    weight: $bold;
+                }
+                
+                @media ( max-width: $base + 80px ) {
+//                	@include responsive-font(base(28), rem(14));
+                }
+                
+                a {
+                    color: $c-blue-01
+                }
+            }
+        }
+
+    }
+}

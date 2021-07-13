@@ -1,0 +1,69 @@
+html:not(.ie) {
+    .anim {
+        transition: all 600ms ease-out;
+        opacity: 0;
+        
+        &--left {
+            transform: translate3d(-50px, 0, 0);
+        }
+        
+        &--right {
+            transform: translate3d(50px, 0, 0);
+        }
+
+        &--up {
+            transform: translate3d(0, 50px, 0);
+        }
+        
+        &--visible {
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+            opacity: 1;
+        }
+    }
+    
+    hr.anim {
+        opacity: 1;
+        transition: all 1600ms ease-out;
+    }
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+
+// Text
+
+.aligncenter {
+    text-align: center;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.u-cover {
+    transition: all 500ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}
+
+
+// 
+
+.desktop {
+    @media ( max-width: $smartphone_portrait + px ) {
+    	display: none;
+    }
+}
+
+.mobile {
+    @media ( min-width: $smartphone_portrait + 1px ) {
+    	display: none;
+    }
+}

@@ -1,0 +1,36 @@
+.o-accordion {
+    
+    li {
+        cursor: pointer;        
+
+        & > div {
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            
+            p {
+                @extend %lead--5;
+                line-height: 2em;
+                color: $c-gray-01;
+            }
+            
+            section {
+                padding: 16px 0;
+            }
+        }
+        
+        &.is-rollout {
+            h3 {
+                &:after {
+                    content: "\e904";
+                }
+            }
+            
+            .o-lead {
+                &--2 {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}

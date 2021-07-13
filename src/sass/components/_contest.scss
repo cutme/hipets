@@ -1,0 +1,74 @@
+.c-contest {
+    background-color: $c-blue-02;
+    
+    &__form {
+        margin: 0 auto;
+        max-width: 460px;
+    }
+    
+    &__summary {
+        background-color: $c-gray-03;
+        padding: {
+            top: 80px;
+            bottom: 80px;
+        }
+        
+        @media ( max-width: $base + 80px ) {
+        	@include responsive-padding-top(base(80), rem(50));
+        	@include responsive-padding-bottom(base(80), rem(50));
+        }
+
+        p {
+            max-width: 660px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.2em;
+            font-size: rem(25);
+            
+            @media ( max-width: $base + 80px ) {
+            	@include responsive-font(base(25), rem(14));
+            }
+        }
+    }
+
+    .o-cols {
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            &:first-of-type {
+                
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    width: grid(670);
+                    padding: 0 grid(50, 670);                	
+                }
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                    margin-bottom: 3em;
+                }
+            }
+            
+            &:last-of-type {
+                @extend %flex;
+                @extend %flex-y;
+            }
+        }  
+    }
+    
+    .o-header {
+        text-align: center;
+        color: white;
+        
+        h2 {
+            @extend %lead--1;
+            margin-bottom: .5em;
+            font-weight: $bold;
+        }
+        
+        h3 {
+            @extend %lead--4;
+            margin-bottom: 2em;
+        }
+    }
+}

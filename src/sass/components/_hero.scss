@@ -1,0 +1,68 @@
+.c-hero {
+    height: 484px;
+    background: {
+        image: url(../img/hero/bg.webp);
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+    
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        background-image: url(../img/hero/bg@2x.webp);
+    }
+    
+    @media ( max-width: $base + 80px ) {
+    	@include responsive-height(base(484), rem(410));
+    }
+    
+    figure {
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: none;
+        }
+    }
+    
+    .o-article {
+        
+        @media ( min-width: $smartphone_portrait + 1px ) {
+            width: grid(720);	
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            text-align: center;
+        }
+
+        img {
+            margin-bottom: 5em;
+        }
+        
+        p {
+            @extend %lead--2;
+            color: $c-gray-01;
+        }
+        
+        strong {
+            color: $c-blue-01;
+        }
+    }
+    
+    .o-logo {
+        width: 373px;
+        
+        @media ( max-width: $base + 80px ) {
+        	@include responsive-width(base(373), rem(128));
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	margin: {
+            	left: auto;
+            	right: auto;
+        	}
+        }
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-y;
+        height: 100%;
+    }
+}
