@@ -6,6 +6,7 @@ require('./js/helpers.js');
 require('./js/polyfills.js');
 require('./js/init.js');
 require('./js/inview.js');
+require('./js/textroller.js');
 
 require('./img/contest/cat-heart.webp');
 require('./img/contest/cat-heart@2x.webp');

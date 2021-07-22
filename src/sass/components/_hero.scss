@@ -24,7 +24,7 @@
     .o-article {
         
         @media ( min-width: $smartphone_portrait + 1px ) {
-            width: grid(720);	
+            width: grid(730);	
         }
         
         @media ( max-width: $smartphone_portrait + px ) {

@@ -32,19 +32,19 @@
     }
 
     .o-cols {
-        @media ( max-width: $smartphone_portrait + px ) {
+        @media ( max-width: $tablet_portrait + px ) {
         	display: block;
         }
         
         &__item {
             &:first-of-type {
                 
-                @media ( min-width: $smartphone_portrait + 1px ) {
+                @media ( min-width: $tablet_portrait + 1px ) {
                     width: grid(670);
                     padding: 0 grid(50, 670);                	
                 }
                 
-                @media ( max-width: $smartphone_portrait + px ) {
+                @media ( max-width: $tablet_portrait + px ) {
                     margin-bottom: 3em;
                 }
             }
@@ -52,6 +52,12 @@
             &:last-of-type {
                 @extend %flex;
                 @extend %flex-y;
+                
+                img {
+                    @media ( max-width: $tablet_portrait + px ) {
+                        margin: 0 auto;
+                    }
+                }
             }
         }  
     }
